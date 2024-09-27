@@ -1,0 +1,124 @@
+/*Estilo CSS*/
+body {
+    font-family: "Merriweather Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+.merriweather-sans-italic {
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+  }
+nav {
+    width: 200px;
+    border-right: solid black;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav img {
+    width: 10%;
+    margin-right: 0.5rem;
+}
+
+nav a:hover {
+    background-color: lightgrey;
+    color: darkblue;
+    border-radius: 45px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover{
+    background-color: #ff0000;
+}
+
+.patient-info {
+    background-color: rgba(0, 0, 255, 0.192);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.patient-info p {
+    margin: 5px 0;
+}
+
+.lab-group {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: darkblue;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+}
+
+
+.lab-group{
+    background-color: rgba(0, 0, 255, 0.075);
+}

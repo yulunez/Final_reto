@@ -1,0 +1,490 @@
+/*Estilo CSS*/
+body {
+    margin: 0;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.merriweather-sans-italic {
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(20, 5%);
+    height: 100vh;
+    gap: 0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    grid-column: 1 / 5; 
+    grid-row: 1 / 21; 
+    border-right: solid black;
+    color: black;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    width: 200px;
+    color: black;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 100%;
+    padding: 1rem;
+}
+
+nav img {
+    width: 10%;
+    margin-right: 0.5rem;
+}
+
+nav .perfil {
+    background-color: lightgrey;
+    color: darkblue;
+    border-radius: 45px;
+}
+
+nav a:hover {
+    background-color: lightgrey;
+    color: darkblue;
+    border-radius: 45px;
+}
+
+.header {
+    grid-column: 5 / 21;
+    grid-row: 1 / 4;
+    display: flex;
+    align-items: center;
+    background-color: #f0f4f8;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.header button {
+    padding: 10px 20px;
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.header button:hover {
+    background-color: #ff0000;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: repeat(10, 10%);
+    grid-column: 5 / 21;
+    grid-row: 4 / 21; 
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.usu {
+    display: grid;
+    grid-row: 1 / 6;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(2, 50%);
+    background-color: rgba(0, 0, 255, 0.192);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+}
+
+.imgperfil {
+    grid-row: 1 / 3;
+    grid-column: 1 / 6;
+    background-image: url(img/R-FAST-PNG-05.png);
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.saludo {
+    padding-top: 10%;
+}
+
+.text {
+    grid-column: 7/21;
+    color: darkblue;
+}
+
+.datosu {
+    grid-row: 7 / 11;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dato {
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;      
+    padding: 10px;
+    border: 1px solid #ccc;  
+    width: 20%;
+    border-radius: 25px;
+    margin: 0.5rem;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;  
+    font-size: 100%;
+}
+
+.imagen img {
+    width: 20px;               
+    height: auto;
+    background-position: center;
+    background-size: cover;              
+}
+
+h2 {
+    color: darkblue;
+    margin-bottom: 0%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        height: auto;
+        grid-column: 1 / -1;
+        grid-row: auto;
+        border-right: none;
+        border-bottom: solid black;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav a {
+        width: auto;
+        font-size: 14px;
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    nav img {
+        width: 20px;
+        margin-right: 5px;
+    }
+
+    .header {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header img {
+        margin-bottom: 10px;
+    }
+
+    .header button {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    .content {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .usu {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .imgperfil {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        height: 100px;
+    }
+
+    .text {
+        grid-column: 1 / -1;
+        grid-row: auto;
+    }
+
+    .datosu {
+        flex-direction: column;
+    }
+
+    .dato {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+
+/*body {
+    margin: 0;
+    font-family: "Merriweather Sans", sans-serif;
+}
+
+.merriweather-sans-italic {
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Contenedor principal usando CSS Grid */
+.container {
+    display: grid;
+    grid-template-columns: repeat(20, 5%); /* 10 columnas del 10% */
+    grid-template-rows: repeat(20, 5%); /* 10 filas del 10% */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    gap: 0; /* Sin espacio entre columnas y filas */
+}
+
+/* Estilo para el menú de navegación */
+nav {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    position: sticky;
+    grid-column: 1 / 5; 
+    grid-row: 1 / 21; 
+    border-right: solid black;
+    color: black;
+    padding-left: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a {
+    width: 200px;
+    color: black;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 100%;
+    padding: 1rem;
+}
+
+img{
+    width: 10%;
+    margin-right: 0.5rem;
+}
+
+nav .perfil{
+    background-color: lightgrey;
+    color: darkblue;
+    border-radius: 45px;
+}
+
+@media (max-width: 480px) {
+    /* Ajuste para el menú de navegación */
+    nav {
+        position: relative;
+        height: auto;
+        grid-column: 1 / -1; /* Ocupa todo el ancho en móviles */
+        border-right: none;
+        border-bottom: solid black;
+        padding-left: 10px;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        width: auto;
+        font-size: 14px;
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    img {
+        width: 10%; /* Ajuste para hacer más visible la imagen */
+        margin-right: 10px;
+    }
+
+    /* Ajustes para el contenedor de datos de usuario */
+    .datosu {
+        grid-row: 7 / 11; 
+        display: flex;
+        flex-direction: column; /* Cambia a columnas en dispositivos móviles */
+        flex-wrap: wrap;
+        align-items: center; /* Centra los elementos en móviles */
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .dato {
+        width: 90%; /* Aumentamos el ancho en dispositivos pequeños */
+        margin: 0.5rem 0;
+        font-size: 14px; /* Ajusta el tamaño del texto para móviles */
+    }
+
+    .texto {
+        max-width: 90%;
+        font-size: 12px; /* Tamaño de texto más pequeño para pantallas móviles */
+    }
+
+    /* Ajuste para el encabezado */
+    .header {
+        grid-column: 1 / -1; /* Ocupa todo el ancho del dispositivo móvil */
+        grid-row: 1 / 3; /* Ajusta las filas del header */
+        flex-direction: column; /* Cambia el header a columna para móviles */
+        align-items: center; /* Centra el contenido del header */
+        padding: 10px 0; /* Ajusta el padding para que sea uniforme */
+    }
+
+    .header img {
+        width: 30px; /* Ajustamos el tamaño del logo */
+        height: 30px;
+        margin-bottom: 10px; /* Espacio entre el logo y el nombre del usuario */
+    }
+
+    .header button {
+        width: 90%; /* Botón más ancho en dispositivos móviles */
+        font-size: 14px; /* Tamaño del texto más pequeño */
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    /* Ajustes en el contenido */
+    .content {
+        grid-column: 1 / -1; /* Ocupa todo el ancho en dispositivos móviles */
+        padding: 10px;
+        grid-template-rows: auto; /* Ajuste de filas para que sea más fluido */
+    }
+}
+
+
+
+nav a:hover{
+    background-color: lightgrey;
+    color: darkblue;
+    border-radius: 45px;
+}
+
+/* Estilo para el encabezado con logo, nombre del paciente y botón de cerrar sesión */
+.header {
+    grid-column: 5 / 21; /* Ocupa desde la tercera columna hasta la última */
+    grid-row: 1 / 4; /* Solo la primera fila */
+    display: flex;
+    align-items: center;
+    background-color: #f0f4f8;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+
+.header button {
+    padding: 10px 20px;
+    background-color: #ff4b4b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.header button:hover {
+    background-color: #ff0000;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: repeat(10, 10%) ;
+    grid-column: 5 / 21;
+    grid-row: 4 / 21; 
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.usu{
+    display: grid;
+    grid-row: 1 / 6;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(2, 50%);
+    background-color: rgba(0, 0, 255, 0.192);
+    border-radius: 15px;
+    padding: 1rem 2rem;
+}
+.imgperfil{
+    grid-row: 1 / 3;
+    grid-column: 1 / 6;
+    background-image: url(img/R-FAST-PNG-05.png);
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.saludo{
+    padding-top: 10%; ;
+}
+.text{
+    grid-column: 7/21;
+    color: darkblue;
+}
+.datosu{
+    grid-row: 7 / 11;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dato{
+    display: flex;             
+    justify-content: space-between; 
+    align-items: center;      
+    padding: 10px;
+    border: 1px solid #ccc;  
+    width: 20%;
+    border-radius: 25px;
+    margin: 0.5rem;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;  
+    font-size: 75%;
+}
+
+.imagen img {
+    width: 20px;               
+    height: auto;
+    background-position: center;
+    background-size: cover;              
+}
+
+h2{
+    color: darkblue;
+    margin-bottom: 0%;
+}
